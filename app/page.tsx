@@ -15,7 +15,7 @@ export default function Home() {
             conversions by
             <br />
             3x with{" "}
-            <span className={title({ color: "violet", size: "md" })}>
+            <span className={title({ color: "primary", size: "md" })}>
               Zappy
             </span>
           </h1>

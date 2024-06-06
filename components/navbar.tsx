@@ -23,8 +23,8 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full gap-8" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo className="text-[#FF1CF7]" />
-            <p className="font-bold text-[#FF1CF7]">Zappy</p>
+            <Logo className="text-primary" />
+            <span className="font-bold text-primary text-xl">Zappy</span>
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-8 justify-start ml-2">
@@ -33,7 +33,7 @@ export const Navbar = () => {
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium"
+                  "data-[active=true]:text-primary font-semibold text-default-600"
                 )}
                 color="foreground"
                 href={item.href}
