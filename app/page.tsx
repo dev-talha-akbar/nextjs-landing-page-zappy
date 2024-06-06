@@ -1,63 +1,51 @@
-import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
-import { button as buttonStyles } from "@nextui-org/theme";
+import { Input } from "@nextui-org/input";
+import { Button } from "@nextui-org/button";
 
-import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
-
 import heroImage from "@/images/hero.jpg";
 
 export default function Home() {
   return (
     <>
-      <section className="flex flex-col gap-4 py-8 md:py-10">
-        <div className="inline-block w-lg max-w-[50%]">
-          <h1 className={title({ size: "lg" })}>
-            Increase conversions by 3x with{" "}
-            <span className={title({ color: "violet", size: "lg" })}>
+      <section className="px-6 pt-20 relative">
+        <div className="flex flex-col gap-4 w-[40%]">
+          <h1 className={title({ size: "md" })}>
+            Increase
+            <br />
+            conversions by
+            <br />
+            3x with{" "}
+            <span className={title({ color: "violet", size: "md" })}>
               Zappy
             </span>
           </h1>
           <h2 className={subtitle({ class: "mt-4" })}>
-            Beautiful, fast and modern React UI library.
+            Thousands of companies use Zappy to convert visitors into leads and
+            sales with the power of Social Proof Marketing.
           </h2>
+          <div className="flex flex-col gap-4 mt-4">
+            <div className="flex gap-2">
+              <Input placeholder="Enter your email address" />
+              <Button className="w-48" color="primary" variant="solid">
+                Start free trial
+              </Button>
+            </div>
+            <p className="text-sm text-default-400">
+              By signing up, I agree to Zappy Privacy Policy and Terms of
+              Service
+            </p>
+          </div>
         </div>
 
-        <div className="flex gap-3">
-          <Link
-            isExternal
-            className={buttonStyles({
-              color: "primary",
-              radius: "full",
-              variant: "shadow",
-            })}
-            href={siteConfig.links.docs}
-          >
-            Documentation
-          </Link>
-          <Link
-            isExternal
-            className={buttonStyles({ variant: "bordered", radius: "full" })}
-            href={siteConfig.links.github}
-          >
-            <GithubIcon size={20} />
-            GitHub
-          </Link>
-        </div>
-
-        <div className="mt-8">
-          <Snippet hideCopyButton hideSymbol variant="flat">
-            <span>
-              Get started by editing <Code color="primary">app/page.tsx</Code>
-            </span>
-          </Snippet>
-        </div>
+        <div
+          className="absolute top-20 left-[50%] right-[calc(-1_*_(1512px_-_1280px)_/_2)] h-full rounded-l-[4rem]"
+          style={{
+            backgroundImage: `url(${heroImage.src})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
       </section>
-      <aside className="absolute top-32 right-0 w-[50%]">
-        <img src={heroImage.src} alt="hero" className="rounded-l-[4rem]" />
-      </aside>
     </>
   );
 }
