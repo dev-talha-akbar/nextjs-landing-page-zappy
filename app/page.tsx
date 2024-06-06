@@ -38,7 +38,7 @@ export default function Home() {
         </div>
 
         <div
-          className="absolute top-20 left-[50%] right-[calc(-1_*_(1512px_-_1280px)_/_2)] h-full rounded-l-[4rem]"
+          className="absolute top-20 left-[50%] right-[calc(-1_*_(1512px_-_1280px)_/_2)] h-[calc(100%-4rem)] rounded-l-[4rem]"
           style={{
             backgroundImage: `url(${heroImage.src})`,
             backgroundSize: "cover",
