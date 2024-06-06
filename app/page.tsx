@@ -4,6 +4,8 @@ import { Button } from "@nextui-org/button";
 import { title, subtitle } from "@/components/primitives";
 import heroImage from "@/images/hero.jpg";
 
+import { Notification } from "@/components/notification";
+
 export default function Home() {
   return (
     <>
@@ -44,7 +46,19 @@ export default function Home() {
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-        />
+        >
+          <Notification className="absolute left-[-50px] top-[30px] opacity-85">
+            <p>
+              <b>Jake</b> from <b>Lahore, Pakistan</b> just signed up for a call
+            </p>
+          </Notification>
+
+          <Notification className="absolute right-[150px] bottom-[30px] opacity-85">
+            <p>
+              <b>Jake</b> from <b>Lahore, Pakistan</b> just signed up for a call
+            </p>
+          </Notification>
+        </div>
       </section>
     </>
   );
