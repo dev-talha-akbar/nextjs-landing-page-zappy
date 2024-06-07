@@ -27,8 +27,8 @@ module.exports = {
               DEFAULT: "#5A34E3",
             },
             secondary: {
-              bg: "pink",
-              DEFAULT: "deeppink",
+              bg: "#F9DDD5",
+              DEFAULT: "#e35934",
             },
           },
         },

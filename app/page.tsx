@@ -15,6 +15,7 @@ import logoipsum212 from "@/images/logoipsum-212.svg";
 import logoipsum243 from "@/images/logoipsum-243.svg";
 
 import { Feature } from "@/components/feature";
+import clsx from "clsx";
 
 const brandImages = [logoipsum243, logoipsum212, logoipsum264, logoipsum226];
 
@@ -59,22 +60,16 @@ export default function Home() {
             backgroundPosition: "center",
           }}
         >
-          <Notification className="absolute left-[-50px] top-[30px]">
+          <Notification className="absolute left-[-100px] top-[50px]">
             <p>
               <b>Micheal</b> from <b>Hamburg, Germany</b> just signed up for a
               call
             </p>
           </Notification>
-
-          <Notification className="absolute right-[150px] bottom-[30px]">
-            <p>
-              <b>Ahmed</b> from <b>Lahore, Pakistan</b> requested a demo
-            </p>
-          </Notification>
         </div>
       </section>
       <section className="flex flex-col gap-8 px-6 pt-20 items-center">
-        <p className="text-semibold">
+        <p className={clsx(subtitle(), "text-center")}>
           Trusted by high converting sites including...
         </p>
         <div className="flex gap-16 opacity-50">
