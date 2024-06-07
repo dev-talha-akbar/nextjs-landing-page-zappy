@@ -47,13 +47,13 @@ export default function Home() {
             backgroundPosition: "center",
           }}
         >
-          <Notification className="absolute left-[-50px] top-[30px] opacity-85">
+          <Notification className="absolute left-[-50px] top-[30px] opacity-90">
             <p>
               <b>Jake</b> from <b>Lahore, Pakistan</b> just signed up for a call
             </p>
           </Notification>
 
-          <Notification className="absolute right-[150px] bottom-[30px] opacity-85">
+          <Notification className="absolute right-[150px] bottom-[30px] opacity-90">
             <p>
               <b>Jake</b> from <b>Lahore, Pakistan</b> just signed up for a call
             </p>

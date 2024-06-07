@@ -26,6 +26,10 @@ module.exports = {
             primary: {
               DEFAULT: "#5A34E3",
             },
+            secondary: {
+              bg: "pink",
+              DEFAULT: "deeppink",
+            },
           },
         },
       },
