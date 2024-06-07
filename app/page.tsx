@@ -40,25 +40,31 @@ export default function Home() {
         </div>
 
         <div
-          className="absolute top-20 left-[50%] right-[calc(-1_*_(1512px_-_1280px)_/_2)] h-[calc(100%-4rem)] rounded-l-[4rem]"
+          className="absolute top-20 left-[50%] right-[calc(-1_*_(1512px_-_1280px)_/_2)] h-[calc(100%-5rem)] rounded-l-[4rem]"
           style={{
             backgroundImage: `url(${heroImage.src})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <Notification className="absolute left-[-50px] top-[30px] opacity-90">
+          <Notification className="absolute left-[-50px] top-[30px]">
             <p>
-              <b>Jake</b> from <b>Lahore, Pakistan</b> just signed up for a call
+              <b>Micheal</b> from <b>Hamburg, Germany</b> just signed up for a
+              call
             </p>
           </Notification>
 
-          <Notification className="absolute right-[150px] bottom-[30px] opacity-90">
+          <Notification className="absolute right-[150px] bottom-[30px]">
             <p>
-              <b>Jake</b> from <b>Lahore, Pakistan</b> just signed up for a call
+              <b>Ahmed</b> from <b>Lahore, Pakistan</b> requested a demo
             </p>
           </Notification>
         </div>
+      </section>
+      <section className="flex pt-20 justify-center">
+        <p className="text-semibold">
+          Trusted by high converting sites including...
+        </p>
       </section>
     </>
   );
