@@ -34,3 +34,23 @@ export const subtitle = tv({
     fullWidth: true,
   },
 });
+
+export const heading = tv({
+  base: "inline font-bold text-default-600",
+  variants: {
+    color: {
+      primary: "text-primary",
+    },
+    size: {
+      sm: "text-sm lg:text-md",
+      md: "text-md lg:text-lg",
+      lg: "text-lg lg:text-2xl",
+    },
+    fullWidth: {
+      true: "w-full block",
+    },
+  },
+  defaultVariants: {
+    size: "md",
+  },
+});
