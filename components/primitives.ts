@@ -43,8 +43,8 @@ export const heading = tv({
     },
     size: {
       sm: "text-sm lg:text-md",
-      md: "text-md lg:text-lg",
-      lg: "text-lg lg:text-2xl",
+      md: "lg:text-md",
+      lg: "text-md lg:text-lg",
     },
     fullWidth: {
       true: "w-full block",
