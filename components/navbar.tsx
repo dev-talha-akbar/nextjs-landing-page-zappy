@@ -56,7 +56,7 @@ export const Navbar = () => {
             className="text-default-600 inline-flex gap-2"
             href={siteConfig.links.twitter}
           >
-            <PhoneIcon />
+            <PhoneIcon size={16} />
             <span>1.800.847.298</span>
           </Link>
         </NavbarItem>
