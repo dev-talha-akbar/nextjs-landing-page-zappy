@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + NextUI",
+  name: "Zappy",
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
     {
@@ -27,39 +27,28 @@ export const siteConfig = {
   ],
   navMenuItems: [
     {
-      label: "Profile",
-      href: "/profile",
+      label: "Features",
+      href: "/features",
     },
     {
-      label: "Dashboard",
-      href: "/dashboard",
+      label: "Integrations",
+      href: "/integrations",
     },
     {
-      label: "Projects",
-      href: "/projects",
+      label: "Case Studies",
+      href: "/case-studies",
     },
     {
-      label: "Team",
-      href: "/team",
+      label: "Reviews",
+      href: "/reviews",
     },
     {
-      label: "Calendar",
-      href: "/calendar",
-    },
-    {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
+      label: "Pricing",
+      href: "/pricing",
     },
   ],
   links: {
+    telephone: "tel:1-800-847-298",
     github: "https://github.com/nextui-org/nextui",
     twitter: "https://twitter.com/getnextui",
     docs: "https://nextui.org",

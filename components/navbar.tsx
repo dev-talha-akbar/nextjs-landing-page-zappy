@@ -54,7 +54,7 @@ export const Navbar = () => {
             isExternal
             aria-label="Twitter"
             className="text-default-600 inline-flex gap-2"
-            href={siteConfig.links.twitter}
+            href={siteConfig.links.telephone}
           >
             <PhoneIcon size={16} />
             <span>1.800.847.298</span>
@@ -70,7 +70,7 @@ export const Navbar = () => {
 
       <NavbarMenu>
         <div className="mx-2 mt-2 flex flex-col gap-2">
-          {siteConfig.navItems.map((item) => (
+          {siteConfig.navMenuItems.map((item) => (
             <NavbarMenuItem key={item.href}>
               <Link href={item.href}>{item.label}</Link>
             </NavbarMenuItem>

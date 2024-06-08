@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <>
       <section className="px-6 pt-20 relative">
-        <div className="flex flex-col gap-4 w-full md:w-[40%]">
+        <div className="flex flex-col gap-4 w-full md:w-[45%]">
           <h1 className={title({ size: "md" })}>
             Increase
             <br />
@@ -39,9 +39,13 @@ export default function Home() {
             sales with the power of Social Proof Marketing.
           </h2>
           <div className="flex flex-col gap-4 mt-4">
-            <div className="flex gap-2">
+            <div className="flex lg:flex-row lg:gap-2 md:flex-col md:gap-4 gap-2">
               <Input placeholder="Enter your email address" />
-              <Button className="w-48" color="primary" variant="solid">
+              <Button
+                className="w-48 md:w-full lg:w-48"
+                color="primary"
+                variant="solid"
+              >
                 Start free trial
               </Button>
             </div>
