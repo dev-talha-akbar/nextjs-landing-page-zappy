@@ -52,16 +52,16 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hidden md:flex absolute top-20 left-[50%] right-[calc(-1_*_(1512px_-_1280px)_/_2)] h-[calc(100%-5rem)]">
+        <div className="hidden md:flex absolute top-20 left-[50%] right-0 xl:right-[calc(-1_*_(min(100vw,1536px)_-_1280px)_/_2)] h-[calc(100%-5rem)]">
           <Image
             classNames={{
               img: "!rounded-r-none rounded-l-[4rem]",
               wrapper: "!rounded-r-none rounded-l-[4rem] !w-full !max-w-full",
             }}
-            className="object-cover w-full max-h-full object-center -z-1"
+            className="object-cover w-full h-full object-center -z-1"
             src={heroImage.src}
           />
-          <Notification className="absolute left-[-100px] top-[40px]">
+          <Notification className="absolute left-[-50px] top-[20px] lg:left-[-100px] lg:top-[40px]">
             <p>
               <b>Micheal</b> from <b>Hamburg</b> just signed up for a call
             </p>
