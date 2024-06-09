@@ -72,17 +72,23 @@ export default function Home() {
           </Notification>
         </div>
       </section>
-      <section className="flex flex-col gap-8 px-6 pt-20 items-center">
-        <p className={clsx(subtitle(), "text-center")}>
+      <section className="hidden md:flex flex-col gap-8 px-6 pt-20 items-center">
+        <p className={clsx(subtitle(), "md:text-center")}>
           Trusted by high converting sites including...
         </p>
         <div className="flex gap-16 opacity-50">
           {brandImages.map((brand, i) => (
-            <Image key={i} src={brand.src} className="h-12 grayscale" />
+            <Image
+              key={i}
+              classNames={{
+                img: "h-12 grayscale",
+              }}
+              src={brand.src}
+            />
           ))}
         </div>
       </section>
-      <section className="flex gap-8 xl:gap-32 px-6 pt-20 items-center">
+      <section className="flex flex-col-reverse md:flex-row gap-12 md:gap-8 xl:gap-32 px-6 pt-20 items-center">
         <div className="w-full rounded-lg">
           <Image src={notionFrame.src} />
         </div>
@@ -99,7 +105,7 @@ export default function Home() {
           </p>
         </Feature>
       </section>
-      <section className="flex gap-8 xl:gap-32 px-6 pt-20 items-center">
+      <section className="flex flex-col md:flex-row gap-12 md:gap-8 xl:gap-32 px-6 pt-20 items-center">
         <Feature title="Automated Outreach for Enhanced Engagement">
           <p>
             Zappy includes automated outreach capabilities that streamline your
@@ -112,7 +118,7 @@ export default function Home() {
           </p>
         </Feature>
         <div className="w-full">
-          <div className="flex w-[80%] mx-auto gap-4">
+          <div className="flex w-full md:w-[80%] mx-auto gap-4">
             <div className="flex flex-col gap-2">
               <span className={title({ size: "lg", color: "primary" })}>
                 76%
@@ -128,7 +134,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="flex gap-8 xl:gap-32 px-6 pt-20 items-center">
+      <section className="flex flex-col-reverse md:flex-row gap-12 md:gap-8 xl:gap-32 px-6 pt-20 items-center">
         <div className="w-full rounded-lg">
           <Image src={notionFrame.src} />
         </div>
