@@ -14,7 +14,6 @@ import NextLink from "next/link";
 import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
 import { PhoneIcon, Logo } from "@/components/icons";
 
 export const Navbar = () => {
@@ -36,7 +35,7 @@ export const Navbar = () => {
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary font-medium text-default-600"
+                  "data-[active=true]:text-primary font-medium text-default-600",
                 )}
                 color="foreground"
                 href={item.href}

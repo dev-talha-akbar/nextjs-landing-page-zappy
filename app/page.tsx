@@ -1,21 +1,17 @@
 import { Input } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
 import { Image } from "@nextui-org/image";
+import clsx from "clsx";
 
-import { title, subtitle, heading } from "@/components/primitives";
+import { title, subtitle } from "@/components/primitives";
 import { Notification } from "@/components/notification";
-
 import heroImage from "@/images/hero.jpg";
-
 import notionFrame from "@/images/notion-frame.png";
-
 import logoipsum264 from "@/images/logoipsum-264.svg";
 import logoipsum226 from "@/images/logoipsum-226.svg";
 import logoipsum212 from "@/images/logoipsum-212.svg";
 import logoipsum243 from "@/images/logoipsum-243.svg";
-
 import { Feature } from "@/components/feature";
-import clsx from "clsx";
 
 const brandImages = [logoipsum243, logoipsum212, logoipsum264, logoipsum226];
 
@@ -58,11 +54,11 @@ export default function Home() {
 
         <div className="hidden md:flex absolute top-20 left-[50%] right-0 xl:right-[calc(-1_*_(min(100vw,1536px)_-_1280px)_/_2)] h-[calc(100%-5rem)]">
           <Image
+            className="object-cover w-full h-full object-center -z-1"
             classNames={{
               img: "!rounded-r-none rounded-l-[4rem]",
               wrapper: "!rounded-r-none rounded-l-[4rem] !w-full !max-w-full",
             }}
-            className="object-cover w-full h-full object-center -z-1"
             src={heroImage.src}
           />
           <Notification className="absolute left-[-50px] top-[20px] lg:left-[-100px] lg:top-[40px]">

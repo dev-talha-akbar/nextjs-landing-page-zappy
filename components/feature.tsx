@@ -8,7 +8,7 @@ export const Feature = ({ children, title, ...props }: any) => {
       <span className="block absolute top-0 left-0 w-[33%] h-[3px] rounded-[3px] bg-[linear-gradient(to_right,_#ffffff,_#5a34e3)]" />
       <div className="flex flex-col gap-4 w-full md:w-[85%] mx-auto">
         <div className="flex gap-4 pt-4">
-          <GrowthTrendIcon size={30} className="text-primary" />
+          <GrowthTrendIcon className="text-primary" size={30} />
           <h4 className={heading({ size: "lg" })}>{title}</h4>
         </div>
         {children}
