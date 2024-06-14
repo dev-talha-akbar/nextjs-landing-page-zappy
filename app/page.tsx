@@ -1,73 +1,21 @@
-import { Input } from "@nextui-org/input";
-import { Button } from "@nextui-org/button";
-import { Image } from "@nextui-org/image";
 import clsx from "clsx";
+import { Image } from "@nextui-org/image";
 
+import { HeroSection } from "@/components/HeroSection";
+import { Feature } from "@/components/feature";
 import { title, subtitle } from "@/components/primitives";
-import { Notification } from "@/components/notification";
-import heroImage from "@/images/hero.jpg";
 import notionFrame from "@/images/notion-frame.png";
 import logoipsum264 from "@/images/logoipsum-264.svg";
 import logoipsum226 from "@/images/logoipsum-226.svg";
 import logoipsum212 from "@/images/logoipsum-212.svg";
 import logoipsum243 from "@/images/logoipsum-243.svg";
-import { Feature } from "@/components/feature";
 
 const brandImages = [logoipsum243, logoipsum212, logoipsum264, logoipsum226];
 
 export default function Home() {
   return (
     <>
-      <section className="px-6 pt-20 relative">
-        <div className="flex flex-col gap-4 w-full md:w-[45%]">
-          <h1 className={title({ size: "md" })}>
-            Increase
-            <br />
-            conversions by
-            <br />
-            3x with{" "}
-            <span className={title({ color: "primary", size: "md" })}>
-              Zappy
-            </span>
-          </h1>
-          <h2 className={subtitle({ class: "mt-4" })}>
-            Thousands of companies use Zappy to convert visitors into leads and
-            sales with the power of Social Proof Marketing.
-          </h2>
-          <div className="flex flex-col gap-4 mt-4">
-            <div className="flex lg:flex-row lg:gap-2 md:flex-col md:gap-4 gap-2">
-              <Input placeholder="Enter your email address" />
-              <Button
-                className="w-48 md:w-full lg:w-48"
-                color="primary"
-                variant="solid"
-              >
-                Start free trial
-              </Button>
-            </div>
-            <p className="text-sm text-default-400">
-              By signing up, I agree to Zappy Privacy Policy and Terms of
-              Service
-            </p>
-          </div>
-        </div>
-
-        <div className="hidden md:flex absolute top-20 left-[50%] right-0 xl:right-[calc(-1_*_(min(100vw,1536px)_-_1280px)_/_2)] h-[calc(100%-5rem)]">
-          <Image
-            className="object-cover w-full h-full object-center -z-1"
-            classNames={{
-              img: "!rounded-r-none rounded-l-[4rem]",
-              wrapper: "!rounded-r-none rounded-l-[4rem] !w-full !max-w-full",
-            }}
-            src={heroImage.src}
-          />
-          <Notification className="absolute left-[-50px] top-[20px] lg:left-[-100px] lg:top-[40px]">
-            <p>
-              <b>Micheal</b> from <b>Hamburg</b> just signed up for a call
-            </p>
-          </Notification>
-        </div>
-      </section>
+      <HeroSection />
       <section className="hidden md:flex flex-col gap-8 px-6 pt-20 items-center">
         <p className={clsx(subtitle(), "md:text-center")}>
           Trusted by high converting sites including...
