@@ -1,37 +1,14 @@
-import clsx from "clsx";
 import { Image } from "@nextui-org/image";
 
 import { HeroSection } from "@/components/HeroSection";
 import { Feature } from "@/components/feature";
-import { title, subtitle } from "@/components/primitives";
+import { title } from "@/components/primitives";
 import notionFrame from "@/images/notion-frame.png";
-import logoipsum264 from "@/images/logoipsum-264.svg";
-import logoipsum226 from "@/images/logoipsum-226.svg";
-import logoipsum212 from "@/images/logoipsum-212.svg";
-import logoipsum243 from "@/images/logoipsum-243.svg";
-
-const brandImages = [logoipsum243, logoipsum212, logoipsum264, logoipsum226];
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <section className="hidden md:flex flex-col gap-8 px-6 pt-20 items-center">
-        <p className={clsx(subtitle(), "md:text-center")}>
-          Trusted by high converting sites including...
-        </p>
-        <div className="flex gap-16 opacity-50">
-          {brandImages.map((brand, i) => (
-            <Image
-              key={i}
-              classNames={{
-                img: "h-12 grayscale",
-              }}
-              src={brand.src}
-            />
-          ))}
-        </div>
-      </section>
       <section className="flex flex-col-reverse md:flex-row gap-12 md:gap-8 xl:gap-32 px-6 pt-20 items-center">
         <div className="w-full rounded-lg">
           <Image src={notionFrame.src} />
