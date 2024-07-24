@@ -1,6 +1,6 @@
 import { Card, CardHeader } from "@nextui-org/card";
 
-import { HeartIcon } from "./icons";
+import { HeartIcon } from "./Icons";
 
 export const Notification = ({ className, children, ...props }: any) => {
   return (

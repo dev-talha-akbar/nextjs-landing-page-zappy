@@ -10,47 +10,55 @@ import logoipsum243 from "@/images/logoipsum-243.svg";
 
 const brandImages = [logoipsum243, logoipsum212, logoipsum264, logoipsum226];
 
-type PartnersProps = {
-  isHeroAnimationComplete: boolean;
-};
-
-export const Partners = ({ isHeroAnimationComplete }: PartnersProps) => {
+export const Partners = () => {
   const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: isHeroAnimationComplete ? 1 : 0,
+    initial: { opacity: 0 },
+    enter: {
+      opacity: 1,
       transition: {
-        staggerChildren: 0.3,
+        delay: 2.5,
       },
     },
   };
 
-  const item = {
-    hidden: { opacity: 0, y: "100px" },
-    show: {
-      opacity: isHeroAnimationComplete ? 0.3 : undefined,
-      y: isHeroAnimationComplete ? 0 : undefined,
+  const brandsContainer = {
+    initial: {},
+    enter: {
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 2.5,
+      },
+    },
+  };
+
+  const brandImage = {
+    initial: { opacity: 0, y: "100px" },
+    enter: {
+      opacity: 0.5,
+      y: 0,
     },
   };
 
   return (
     <motion.div
-      animate="show"
-      className="hidden md:flex flex-col gap-8 px-6 pt-20 items-center"
-      initial="hidden"
+      className="hidden md:flex flex-col gap-8 px-6 pt-20 mt-10 items-center"
+      initial="initial"
       variants={container}
+      viewport={{ once: true }}
+      whileInView="enter"
     >
-      <p className="text-default-600 md:text-center">
+      <p className="text-default-400  md:text-center">
         Trusted by high converting sites including...
       </p>
       <motion.div
-        animate="show"
         className="flex gap-16 opacity-50"
-        initial="hidden"
-        variants={container}
+        initial="initial"
+        variants={brandsContainer}
+        viewport={{ once: true }}
+        whileInView="enter"
       >
         {brandImages.map((brand, i) => (
-          <motion.div key={i} variants={item}>
+          <motion.div key={i} variants={brandImage}>
             <Image
               classNames={{
                 img: "h-12 grayscale",

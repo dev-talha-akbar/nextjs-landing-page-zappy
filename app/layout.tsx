@@ -6,8 +6,8 @@ import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
-import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
@@ -37,7 +37,7 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background font-sans antialiased overflow-x-hidden",
           fontSans.className,
         )}
       >

@@ -40,7 +40,7 @@
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-unused-imports": "^3.2.0",
-    "framer-motion": "^11.1.1",
+    "framer-motion": "^11.3.2",
     "intl-messageformat": "^10.5.0",
     "next": "14.2.3",
     "next-themes": "^0.2.1",

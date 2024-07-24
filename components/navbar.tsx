@@ -17,12 +17,12 @@ import clsx from "clsx";
 import { motion } from "framer-motion";
 
 import { siteConfig } from "@/config/site";
-import { PhoneIcon, Logo } from "@/components/icons";
+import { PhoneIcon, Logo } from "@/components/Icons";
 
 export const Navbar = () => {
   const item = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1 },
+    hidden: { opacity: 0, y: -100 },
+    show: { opacity: 1, y: 0 },
   };
 
   return (
@@ -30,6 +30,7 @@ export const Navbar = () => {
       animate="show"
       className="relative"
       initial="hidden"
+      transition={{ duration: 1 }}
       variants={item}
     >
       <NextUINavbar maxWidth="xl" position="sticky">
@@ -70,10 +71,10 @@ export const Navbar = () => {
               isExternal
               aria-label="Twitter"
               className="text-default-600 inline-flex gap-2"
-              href={siteConfig.links.telephone}
+              href={siteConfig.contact.telephone}
             >
               <PhoneIcon size={16} />
-              <span>1.800.847.298</span>
+              <span>1.8080.847.298</span>
             </Link>
           </NavbarItem>
           <NavbarItem className="hidden lg:flex">
@@ -86,7 +87,7 @@ export const Navbar = () => {
 
         <NavbarMenu>
           <div className="mx-2 mt-2 flex flex-col gap-2">
-            {siteConfig.navMenuItems.map((item) => (
+            {siteConfig.mobileNavItems.map((item) => (
               <NavbarMenuItem key={item.href}>
                 <Link href={item.href}>{item.label}</Link>
               </NavbarMenuItem>
